@@ -13,4 +13,4 @@
     android:id="@+id/tooltip_id"
     android:textColor="@android:color/white"
     android:gravity="left"
-    app:tooltipColor="@color/new_accent"/>
+    app:tooltipColor="@android:color/black"/>

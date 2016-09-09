@@ -1,11 +1,5 @@
 package com.alankar.awesometutorials;
 
-import com.urbanclap.provider.urbanclap_android_provider.BuildConfig;
-import com.urbanclap.provider.urbanclap_android_provider.UCApplication;
-import com.urbanclap.urbanclap.EnvConstants;
-
-import utils.SharedPreferenceManager;
-
 /**
  * Created by alankargupta on 07/09/16.
  */
@@ -13,7 +7,7 @@ import utils.SharedPreferenceManager;
 public class DemoPolicy {
 
     public static boolean shouldShowDemo(DemoType demoType) {
-        return BuildConfig.DEBUG || demoType != null && SharedPreferenceManager.getInstance(UCApplication.getInstance()).
+        return BuildConfig.DEBUG || demoType != null && SharedPreferenceManager.getInstance(AwesomeTutorialApplication.getInstance()).
                 getSharedPreference().getBoolean(demoType.getKey(), true);
     }
 
@@ -22,7 +16,7 @@ public class DemoPolicy {
             return;
         }
 
-        SharedPreferenceManager.getInstance(UCApplication.getInstance()).getSharedPreference()
+        SharedPreferenceManager.getInstance(AwesomeTutorialApplication.getInstance()).getSharedPreference()
                 .edit().putBoolean(demo.getKey(), status).apply();
     }
 }

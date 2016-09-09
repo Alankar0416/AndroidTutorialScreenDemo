@@ -6,4 +6,16 @@ import android.app.Application;
  */
 
 public class AwesomeTutorialApplication extends Application {
+
+    private static AwesomeTutorialApplication mInstance;
+
+    public static AwesomeTutorialApplication getInstance() {
+        return mInstance;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mInstance = this;
+    }
 }

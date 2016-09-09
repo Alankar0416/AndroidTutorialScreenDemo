@@ -5,14 +5,12 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.RelativeLayout;
-
-import com.urbanclap.provider.urbanclap_android_provider.BaseActivity;
-import com.urbanclap.provider.urbanclap_android_provider.R;
 import com.venmo.view.ArrowAlignment;
 import com.venmo.view.TooltipView;
 
@@ -20,13 +18,11 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.io.Serializable;
 
-import utils.Util;
-
 /**
  * Created by alankargupta on 31/08/16.
  */
 
-public class DemoOverlayActivity extends BaseActivity {
+public class DemoOverlayActivity extends AppCompatActivity {
 
     //Intent keys
     static final String HOLE_TYPE = "type";
